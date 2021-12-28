@@ -1,0 +1,21 @@
+
+
+.root{
+    -fx-background-color: #E8F5E9;
+}
+.text-field {
+    -fx-alignment : center ;
+    -fx-border-color : #2E7D32;
+    -fx-text-fill : #2E7D32;
+}
+
+.text-field:focused {
+    -fx-background-color : #C8E6C9;
+    -fx-text-fill : black;
+}
+
+.button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill : white;
+}
+

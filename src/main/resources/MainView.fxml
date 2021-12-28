@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="500.0" stylesheets="@res/theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compression.mainView.MainViewController">
+   <children>
+      <HBox alignment="CENTER" layoutX="114.0" layoutY="14.0" prefWidth="200.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <JFXRadioButton fx:id="compressionRadioButton" text="Compression">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="decompressionRadioButton" text="Decompression">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXRadioButton>
+         </children>
+      </HBox>
+      <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="236.0" layoutY="40.0" text="Info" textFill="#250a86" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="150.0" layoutY="100.0" prefHeight="420.0" prefWidth="480.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+         <content>
+            <VBox fx:id="imagesContainer" prefWidth="470.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></VBox>
+         </content>
+      </ScrollPane>
+      <HBox layoutX="10.0" layoutY="497.0" prefWidth="480.0" spacing="20.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <JFXButton fx:id="selectFileButton" onAction="#selectFiles" text="Select file" />
+            <JFXButton fx:id="selectDirectoryButton" onAction="#selectFolder" text="Select folder" />
+         </children>
+      </HBox>
+      <JFXButton fx:id="actionButton" layoutX="210.0" layoutY="546.0" onAction="#action" text="Compress" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <ProgressBar fx:id="progressBar" layoutX="150.0" layoutY="577.0" prefWidth="200.0" progress="0.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+      <Label fx:id="progressLabel" layoutX="358.0" layoutY="578.0" prefHeight="17.0" prefWidth="89.0" text="00.0 %" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="358.0" AnchorPane.rightAnchor="53.0" />
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="508.0" prefWidth="480.0" spacing="20.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Label text="Destination folder:" />
+            <TextField fx:id="pathTextField" editable="false" prefHeight="25.0" prefWidth="210.0" />
+            <JFXButton fx:id="selectDestinationButton" onAction="#chooseDestinationFolder" text="Select" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
