@@ -197,7 +197,9 @@ public class RLE {
 
         int w = 0, h = 0;
 
-        int hi = 0, wi = 0, color = 0;
+        int hi = bf.getHeight();
+        int wi = bf.getWidth();
+        int color = bf.getColorModel().getPixelSize();
 
         int i = headerLength;
         while (hi != h + 1) {
