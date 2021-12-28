@@ -13,8 +13,8 @@ manipulation.
 # Usage
 It is simple just select an image then compress.
 
-Note: for a notable results use .bmp image. Using g png or jpeg images is not recommended those type of images are already compressed and using Run-length will result in a bigger image because the image
-gets decompressed before applying Run-length algorithm
+For a notable results use .bmp image. Using g png or jpeg images is not recommended those type of images are already compressed and using Run-length will result in a bigger image because the image
+gets decompressed before applying Run-length algorithm.
 
 # Screenshot
 
